@@ -1,5 +1,5 @@
 import './App.css';
-import Info from "./use-state/Info";
+import Info from "./useState/Info";
 
 const App = () => {
     return <Info/>;
