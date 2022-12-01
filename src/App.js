@@ -1,8 +1,11 @@
 import './App.css';
-import Info from "./useState/Info";
+import MyComponent from "./bind/MyComponent";
 
 const App = () => {
-    return <Info/>;
+    return ( <MyComponent>
+        <div> 이게되나?</div>
+        <p>진짜루?!</p>
+    </MyComponent> );
 };
 
 // function App() {
