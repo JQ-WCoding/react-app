@@ -7,7 +7,7 @@ const Info = () => {
     // deps 지정
     useEffect( () => {
         onChangeName();
-    }, [] );
+    }, [name, nickname] );
 
     const onChangeName = e => {
         setName( e.target.value );
