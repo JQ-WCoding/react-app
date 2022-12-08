@@ -7,6 +7,10 @@ const Info = () => {
     // deps 지정
     useEffect( () => {
         onChangeName();
+
+        return () => {
+            console.log( 'clean up' ); // 뒷정리
+        }
     }, [name, nickname] );
 
     const onChangeName = e => {
