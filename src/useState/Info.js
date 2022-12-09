@@ -8,6 +8,8 @@ const Info = () => {
     useEffect( () => {
         onChangeName();
 
+        asynFunc().then();
+
         return () => {
             console.log( 'clean up' ); // 뒷정리
         }
@@ -15,6 +17,10 @@ const Info = () => {
 
     const onChangeName = e => {
         setName( e.target.value );
+    }
+
+    const asynFunc = async () => {
+        return 'hi';
     }
 
     const onChangeNickname = e => {
