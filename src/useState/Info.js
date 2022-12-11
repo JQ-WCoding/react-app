@@ -8,7 +8,9 @@ const Info = () => {
     useEffect( () => {
         onChangeName();
 
-        asynFunc().then();
+        asynFunc().then((res) => {
+            console.log( res );
+        });
 
         return () => {
             console.log( 'clean up' ); // 뒷정리
