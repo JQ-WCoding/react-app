@@ -25,6 +25,17 @@ const Info = () => {
         return 'hi';
     }
 
+    // axios, async await 과 같이 비동기를 사용할 수 있다.
+    const func = async () => {
+        try{
+            const result = await asynFunc();
+
+            return result;
+        }catch ( error ){
+            throw new Error( error );
+        }
+    }
+
     const onChangeNickname = e => {
         setNickname( e.target.value );
     }
