@@ -5,6 +5,7 @@ const PropsScreen = ( props ) => {
             result = props.children;
         } catch ( err ) {
             console.log( err );
+            result = 'error';
         }
 
         if ( props.children ) {
