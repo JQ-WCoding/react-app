@@ -6,17 +6,27 @@ class Counter extends Component {
         super( props );
 
         this.state = {
-            number: 0
+            number     : 0,
+            fixedNumber: 0
         };
     }
 
     render() {
-        const {number} = this.state;
+        const {number, fixedNumber} = this.state;
         return (
             <>
                 <h1>{number}</h1>
+                <h2>unchanged number : {fixedNumber}</h2>
+                {/*<button onClick={() => {*/}
+                {/*    this.setState( {number: number + 1} );*/}
+                {/*}}>*/}
                 <button onClick={() => {
-                    this.setState( {number: number + 1} );
+                    this.setState( prevState => {
+                        return {number: prevState.number + 1};
+                    } );
+
+                    // 위와 동일한 기능
+                    // this.setState( prevState => ( {number: prevState.number + 1} ) );
                 }}>
                     +1
                 </button>
