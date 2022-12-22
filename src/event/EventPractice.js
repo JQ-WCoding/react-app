@@ -84,6 +84,7 @@ const EventPractice = () => {
                    placeholder="User Name"
                    value={username}
                    onChange={onChangeUsername}/>
+
             <input type="text"
                    name="messgae"
                    placeholder="Input Anything that you want"
